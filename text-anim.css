@@ -1,0 +1,78 @@
+/* https://www.cssscript.com/vertical-text-rotator/ */
+
+.vscroll-container {
+  overflow: hidden;
+}
+
+.vscroll-container:after {
+  display: none !important;
+}
+
+.vscroll-item {
+  white-space: nowrap;
+  position: absolute;
+  -webkit-transform: translate3d(0, -120%, 0);
+  transform: translate3d(0, -120%, 0);
+}
+
+.vscroll-item.anim-in {
+  -webkit-transform: translate3d(-50%, -120%, 0);
+  transform: translate3d(-50%, -120%, 0);
+  -webkit-animation: vscrollAnimIn .6s .3s forwards;
+  animation: vscrollAnimIn .6s .3s forwards;
+}
+
+.vscroll-item.anim-out {
+  -webkit-transform: translate3d(-50%, 0%, 0);
+  transform: translate3d(-50%, 0%, 0);
+  -webkit-animation: vscrollAnimOut .6s  forwards;
+  animation: vscrollAnimOut .6s  forwards;
+}
+
+@-webkit-keyframes vscrollAnimIn {
+  0% {
+    -webkit-transform: translate3d(0, -120%, 0);
+    transform: translate3d(0, -120%, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0%, 0);
+    transform: translate3d(0, 0%, 0);
+  }
+}
+
+@keyframes vscrollAnimIn {
+  0% {
+    -webkit-transform: translate3d(0, -120%, 0);
+    transform: translate3d(0, -120%, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0%, 0);
+    transform: translate3d(0, 0%, 0);
+  }
+}
+
+@-webkit-keyframes vscrollAnimOut {
+  0% {
+    -webkit-transform: translate3d(0, 0%, 0);
+    transform: translate3d(0, 0%, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 120%, 0);
+    transform: translate3d(0, 120%, 0);
+  }
+}
+
+@keyframes vscrollAnimOut {
+  0% {
+    -webkit-transform: translate3d(0, 0%, 0);
+    transform: translate3d(0, 0%, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 120%, 0);
+    transform: translate3d(0, 120%, 0);
+  }
+}
