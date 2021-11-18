@@ -9,7 +9,7 @@ function initTextAnimSlider() {
 	var animNextItem = null;
 	var animPrevItem = null;
 	var animFirstLoad = false;
-	var animDuration = 2000;
+	var animDuration = 2500;
 	var animCounter = 0;
 	var setTimeAnim;
 	var setTimeAnimResize;
