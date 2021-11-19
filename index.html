@@ -39,6 +39,41 @@
             background-repeat: no-repeat;
             background-position:center;
         }
+        div.fade-on-appear {
+            opacity: 0;
+        }
+        div.fade-in {
+            animation: fadeIn ease-in 1s;
+            -webkit-animation: fadeIn ease-in 1s;
+            -moz-animation: fadeIn ease-in 1s;
+            -o-animation: fadeIn ease-in 1s;
+            -ms-animation: fadeIn ease-in 1s;
+        }
+        @keyframes fadeIn {
+            0% { opacity:0 }
+            50% { opacity:0 }
+            100% { opacity:100 }
+        }
+        @-webkit-keyframes fadeIn {
+            0% { opacity:0 }
+            50% { opacity:0 }
+            100% { opacity:100 }
+        }
+        @-moz-keyframes fadeIn {
+            0% { opacity:0 }
+            50% { opacity:0 }
+            100% { opacity:100 }
+        }
+        @-o-keyframes fadeIn {
+            0% { opacity:0 }
+            50% { opacity:0 }
+            100% { opacity:100 }
+        }
+        @-ms-keyframes fadeIn {
+            0% { opacity:0 }
+            50% { opacity:0 }
+            100% { opacity:100 }
+        }
     </style>
   </head>
   <body>
@@ -125,7 +160,7 @@
           <p style="font-style: italic">Learning involves acquiring and modifying knowledge, skills, strategies, beliefs, attitudes, and behaviors. People learn cognitive, behavioral, linguistic, motor, and social skills, and these can take many forms.
         </div>
         <p>Learning consists of a set of ongoing processes that go back and forth, feeding into each other.
-           Some of these are:</p>
+           Some of these are (Schunk, 2020):</p>
       </div>
     </div>
 
@@ -238,9 +273,9 @@
            Let's start with sensing.</p>
         <div style="display:table; width:100%; height:25vh; padding-bottom:1em">
           <div style="display:table-row; width:100%; height:50%; clear:both">
-            <div class="image" style="display:table-cell; padding:1em; background-image: url('./hearing.svg')"></div>
-            <div class="image" style="display:table-cell; padding:1em; background-image: url('./seeing.svg')"></div>
-            <div class="image" style="display:table-cell; padding:1em; background-image: url('./feeling.svg')"></div>
+            <div class="image fade-on-appear" style="display:table-cell; padding:1em; background-image: url('./hearing.svg')"></div>
+            <div class="image fade-on-appear" style="display:table-cell; padding:1em; background-image: url('./seeing.svg')"></div>
+            <div class="image fade-on-appear" style="display:table-cell; padding:1em; background-image: url('./feeling.svg')"></div>
           </div>
         </div>
         <p>Our senses provide us with rich, detailed information about the world.
@@ -253,11 +288,12 @@
           <p>The short answer is we don't have to &ndash; at least not consciously!
              Our minds are constantly scanning our senses, automatically picking things that seem 'important' to move into working memory, and throwing everything else away.
              In everday language, we might call this selection process "<b>noticing</b>."
-             Scientists who study cognition call it <b>attention</b>.
+             Scientists who study cognition call it <b>attention</b> (Schunk, 2020).
           </p>
           </div>
           <div class="image" style="display:table-cell; width:35%; vertical-align: middle; padding:1em; background-image:url('./filter.svg')"></div>
         </div></div>
+        <a id="distractions" />
         <p>Attention &ndash; the way we notice things &ndash; has deep roots in our genetic history.
            We tend to notice things that would help us identify opportunities and threats while fending for ourselves in the natural world.
            Things like:</p>
@@ -273,7 +309,7 @@
       </div>
     </div>
 
-    <div class="image" style="height:40vh; background-image:url('recall.svg')"></div>
+    <div class="image fade-on-appear" style="height:40vh; background-image:url('recall.svg')"></div>
 
     <div class="section">
       <div class="text">
@@ -301,17 +337,20 @@
           <div class="image" style="display:table-cell; width:35%; vertical-align: middle; padding:1em; background-image:url('consolidate.svg')"></div>
         </div></div>
         <p>Consolidation does not occur until we sleep, and the longer we wait to go to sleep, the greater risk we run of forgetting the new idea.
-           Novel PTSD treatments actually use this as a tool: deliberately depriving sleep in patients who have experienced a traumatic event destroys
-           details about the traumatic event before they have been consolidated, decreasing the risk of later developing PTSD (Cohen et. al., 2012).</p>
+           Novel PTSD treatments actually use this as a tool!
+           Deliberately depriving sleep in patients who have experienced a traumatic event destroys details about the traumatic event before they have a chance to be consolidated,
+           decreasing the risk of later developing PTSD (Cohen et. al., 2012).</p>
         <a id="memory-reinforcement" />
         <div style="display:table"><div style="display:table-row">
           <div style="display:table-cell; width:35%; vertical-align: middle">
             <center><p style="font-size: 600%">?</p></center>
           </div>
           <div style="display:table-cell; width:65%; vertical-align: middle">
-            <p>Even ideas that make it past our attentional filters, into working memory, are encoded and finally consolidated aren't permanent!
+            <p>Even ideas that make it past our attentional filters, into working memory, are encoded and finally consolidated aren't permanent.
                The longer we wait between the time we consolidate a new long-term memory and the first time we recall it, the harder it will be to do so.
                We call this process <b>forgetting</b>.
+               We can <b>reinforce</b> a memory by repeatedly recalling it over time, making it harder to forget.
+            </p>
           </div>
         </div></div>
         <a id="recall-distorts-memories" />
@@ -489,7 +528,7 @@
            (which may be written, oral, visual and so on).
            The mode of communication is especially relevant for students with visual impairments, hearing impairments or dyslexia.</p>
         <p>The context in which content is delivered also impacts learning.
-           Learning is more effective in an environment free from distractions like noise or movement, and safe enough that learners do not need to use their mental resources to
+           Learning is more effective in an environment free from distractions like <a class="internal-link" href="#distractions">noise or movement</a>, and safe enough that learners do not need to use their mental resources to
            worry about their own physical or emotional safety.</p>
         <h2>How does memory impact learning?</h2>
         <p>There are two kinds of memory: <a class="internal-link" href="#working-memory">working memory</a> and <a href="long-term-memory">long-term memory</a>.</p>
@@ -498,7 +537,8 @@
            and learning is more effective when all key ideas make it past these filters.
            In human terms, this means learning is most effective when the learners are engaged, focused, or paying attention.</p>
         <p>Working memory is also involved in <a class="internal-link" href="#cognitive-processes">key cognitive processes</a> like elaboration, contextualization, generalization and transfer.
-           Learning is more effective when learners are thinking about the right things, and aren't distracted.</p>
+           In short, these processes operate on information currently in working memory.
+           Learning is more effective when learners are thinking about the right things.</p>
         <p><a class="internal-link" href="#long-term-memory">Long-term memory</a> is involved in learners' ability to recall an idea or repeat a task long after it was initially learned.
         Learning is more effective when key ideas are <a class="internal-link" href="#memory-reinforcement">repeated</a>, with immediate corrective feedback, as well as when key ideas are presented in a variety of different related contexts.</p>
         <h2>What role does motivation play in learning?</h2>
@@ -561,6 +601,19 @@
                 history.pushState(null, null, from.href);
                 to.scrollIntoView({ behavior: 'smooth' });
             });
+        });
+    </script>
+    <script type="text/javascript">
+        document.querySelectorAll("div.fade-on-appear").forEach(e => {
+            let o = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.remove('fade-on-appear');
+                            entry.target.classList.add('fade-in');
+                        }
+                    });
+                }, null /* options */);
+            o.observe(e);
         });
     </script>
   </body>
